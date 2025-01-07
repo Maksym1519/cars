@@ -1,0 +1,44 @@
+.input {
+    width: 100%;
+    height: 56px;
+    padding: 5px 16px;
+    border: 1px solid var(--main-color);
+    appearance: none;
+  
+    &::placeholder {
+      color: var(--main-color);
+    }
+  
+    &:focus {
+      border: 5px solid black;
+      font-weight: 700;
+    }
+  
+    &:focus::placeholder {
+      color: var(--main-color);
+    }
+  
+    &:not(last:last-child) {
+      margin: 0 0 24px;
+    }
+
+    &.error {
+      color: red;
+      border: 1px solid red;
+
+      &::placeholder {
+        color: red;
+      }
+    }
+  }
+  
+  .input-label {
+    align-self: flex-start;
+    font-size: 18px;
+    margin: 0 0 12px;
+
+    &.error {
+      color: red
+    }
+  
+  }

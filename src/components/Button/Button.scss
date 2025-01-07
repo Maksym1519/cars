@@ -1,0 +1,28 @@
+.form-button {
+    position: relative;
+    width: calc(100% - 8px);
+    height: 56px;
+    background: linear-gradient(to bottom, rgb(223, 223, 250), rgb(61, 61, 69));
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: transform .4s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  
+  .form-button::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(to right, rgb(157, 157, 218), rgb(1, 1, 32));
+    z-index: -1; /* За основным элементом */
+    border-radius: 8px; /* При необходимости */
+  }
+  
