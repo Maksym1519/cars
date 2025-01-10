@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./layout";
 import About from "./pages/about/about";
-import Home from "."; 
+import Start from "."; 
 import Movies from "./pages/movies/movies";
 import { Movie } from "./pages/movies/movie.required.page";
 import Error from "./error";
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        element: <Home />,
+        element: <Start />,
         index: true,
       },
       {

@@ -3,12 +3,18 @@
   background-color: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 html,
 #root {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-size: 14px;
+  color: var(--black);
 }
 
 .main {
@@ -17,13 +23,23 @@ html,
   flex: 1 1;
 }
 
+.container {
+  width: 100%;
+  max-width: 1470px;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
 a {
-  color: #213547;
   text-decoration: none;
+  color: inherit;
 }
 

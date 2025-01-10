@@ -1,3 +1,11 @@
 :root {
     --main-color: #213547;
-}
+    --white: #fff;
+    --red: #ca0100;;
+    --redHovered: rgb(247, 1, 1);
+    --redBorder: rgb(149, 1, 1);
+    --black: #000;
+    --grey: #737373;
+    --grey-400: #eff0f0;
+   }
+   

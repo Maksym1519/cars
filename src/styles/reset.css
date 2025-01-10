@@ -78,3 +78,25 @@ button {
   color: inherit;    /* Наследуем цвет текста */
   appearance: none;  
 }
+
+  select {
+    all: unset; /* Убираем все стили */
+    appearance: none; /* Отключаем встроенные стили браузера */
+    -moz-appearance: none; /* Для Firefox */
+    -webkit-appearance: none; /* Для WebKit-браузеров (Chrome, Safari) */
+    background: none; /* Убираем фон */
+    border: none; /* Убираем рамку */
+    box-shadow: none; /* Убираем тени */
+    outline: none; /* Убираем контур */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем внешние отступы */
+    font: inherit; /* Наследуем шрифт от родителя */
+    color: inherit; /* Наследуем цвет текста */
+    line-height: inherit; /* Наследуем высоту строки */
+    width: 100%; /* Можно задать ширину вручную */
+    cursor: pointer; /* Добавляем курсор для интерактивности */
+}
+
+select::-ms-expand {
+  display: none;
+}
