@@ -48,7 +48,7 @@ const Header = () => {
           <div className="header__main-logo">
             <Link href="/">
               <svg>
-                <use href="src/assets/images/sprite.svg#logo"></use>
+                <use href="/src/assets/images/sprite.svg#logo"></use>
               </svg>
             </Link>
 

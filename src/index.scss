@@ -1,10 +1,6 @@
-@import './styles/base.css';
+@use './pages/home/home';
+@use './components/Header/Header';
 @import './styles/reset.css';
+@import './styles/base.css';
 @import './styles/variables.css';
-@import './styles/breakpoints.scss';
-@import './pages/home/home.scss';
-@import './components/Header/Header.scss';
-
-
-
 

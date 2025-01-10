@@ -1,3 +1,5 @@
+@use '../../styles/breakpoints' as breakpoints;
+
 .header {
   width: 100%;
   display: flex;
@@ -76,6 +78,10 @@
       flex-direction: column;
       padding: 0 0 0 20px;
       border-left: 1px solid var(--black);
+
+      @include breakpoints.media(xl) {
+         display: none;
+      }
     }
 
     &-navigation {
@@ -176,10 +182,3 @@
   }
 }
 
-@media(max-width: $breakpoint-xxl) {
-  .header__main {
-    &-logo-text {
-      display: none;
-    }
-  }
-}
