@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 import Button from "../Forms/Button/Button";
 import Select from "../Forms/Select/Select";
 
+
 const Header = () => {
   return (
     <header className="header">
-      <div className="header__top">
+      <img src="@img/react.svg" alt="" />
+       <div className="header__top">
         <Container>
           <div className="header__top-content">
             <div className="header__top-location">
               <svg>
-                <use href="/src/assets/images/sprite.svg#location"></use>
+                <use href="sprite.svg#location"></use>
               </svg>
 
               <span className="header__top-location-text">
@@ -21,7 +23,7 @@ const Header = () => {
 
             <div className="header__top-time">
               <svg>
-                <use href="/src/assets/images/sprite.svg#time"></use>
+                <use href="sprite.svg#time"></use>
               </svg>
               <span className="header__top-location-text">
                 Время работы: c 08:00 до 21:00
@@ -30,7 +32,7 @@ const Header = () => {
 
             <div className="header__top-social">
               <svg>
-                <use href="src/assets/images/sprite.svg#phone"></use>
+                <use href="sprite.svg#phone"></use>
               </svg>
               <span className="header__top-location-text">Whatsapp</span>
             </div>
@@ -48,7 +50,7 @@ const Header = () => {
           <div className="header__main-logo">
             <Link href="/">
               <svg>
-                <use href="/src/assets/images/sprite.svg#logo"></use>
+                <use href="sprite.svg#logo"></use>
               </svg>
             </Link>
 
@@ -84,7 +86,7 @@ const Header = () => {
             <div className="header__main-phone-top">
               <Link>
                 <svg>
-                  <use href="/src/assets/images/sprite.svg#red-phone"></use>
+                  <use href="sprite.svg#red-phone"></use>
                 </svg>
 
                 <span>+7 (800) 551-94-31</span>
@@ -138,20 +140,20 @@ const Header = () => {
 
           <div className="header__bottom-actions">
             <svg>
-              <use href="/src/assets/images/sprite.svg#fav"></use>
+              <use href="sprite.svg#fav"></use>
             </svg>
 
             <svg>
-              <use href="/src/assets/images/sprite.svg#filter"></use>
+              <use href="sprite.svg#filter"></use>
             </svg>
 
             <svg>
-              <use href="/src/assets/images/sprite.svg#search"></use>
+              <use href="sprite.svg#search"></use>
             </svg>
           </div>
         </div>
       </Container>
-    </header>
+     </header>
   );
 };
 export default Header;
