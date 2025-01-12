@@ -13,7 +13,7 @@ const Select = ({ value, className, img }) => {
       </select>
       {img && (
         <svg className="select-wrapper__arrow">
-          <use href={`/src/assets/images/sprite.svg#${img}`}></use>
+          <use href={`sprite.svg#${img}`}></use>
         </svg>
       )}
     </div>
