@@ -4,12 +4,13 @@ import Button from "../Forms/Button/Button";
 import Select from "../Forms/Select/Select";
 import HeaderMobile from "./Header-mobile";
 import { useState, useEffect } from "react";
+import { carCatalog } from "../../data/data";
+import { carUsed } from "../../data/data";
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(null);
-  console.log(screenWidth);
-
+  
   const handleMobile = () => {
     setMobileMenu(!mobileMenu);
   };
@@ -154,7 +155,25 @@ const Header = () => {
         <div className="header__bottom">
           <div className="header__bottom-category">
             <Select
-              value="Каталог авто"
+              value={carCatalog}
+              img="select-arrow"
+              className="header__bottom-category-item"
+              title="Каталог товаров"
+            />
+          </div>
+
+          <div className="header__bottom-category">
+            <Select
+              value={carUsed}
+              img="select-arrow"
+              className="header__bottom-category-item"
+              title = 'Авто с пробегом'
+            />
+          </div>
+
+          <div className="header__bottom-category">
+            <Select
+              value={carCatalog}
               img="select-arrow"
               className="header__bottom-category-item"
             />
@@ -162,7 +181,7 @@ const Header = () => {
 
           <div className="header__bottom-category">
             <Select
-              value="Авто с пробегом"
+              value={carCatalog}
               img="select-arrow"
               className="header__bottom-category-item"
             />
@@ -170,23 +189,7 @@ const Header = () => {
 
           <div className="header__bottom-category">
             <Select
-              value="Кредит и рассрочка"
-              img="select-arrow"
-              className="header__bottom-category-item"
-            />
-          </div>
-
-          <div className="header__bottom-category">
-            <Select
-              value="Спецпредложения"
-              img="select-arrow"
-              className="header__bottom-category-item"
-            />
-          </div>
-
-          <div className="header__bottom-category">
-            <Select
-              value="Такси в кредит"
+              value={carCatalog}
               className="header__bottom-category-item"
             />
           </div>

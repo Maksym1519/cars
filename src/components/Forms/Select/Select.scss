@@ -2,7 +2,10 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-         
+    padding: 0 12px 0 8px;
+    outline: none;
+    border: none;
+       
     &__item {
         display: flex;
         align-items: center;
@@ -21,6 +24,12 @@
     width: 12px;
     height: 8px;
     cursor: pointer;
+   }
+
+   option {
+    background: var(--grey-400);
+    font-size: 12px;
+    border: none !important;
    }
 }
 

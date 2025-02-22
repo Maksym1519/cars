@@ -25,6 +25,7 @@ const BigSlider = ({ img }) => {
         prevEl: '.custom-prev-btn',
       }}
       pagination={{ clickable: true }}
+      grabCursor={true}
       // scrollbar={{ draggable: true }}
       // onSwiper={(swiper) => console.log(swiper)}
       // onSlideChange={() => console.log('slide change')}
