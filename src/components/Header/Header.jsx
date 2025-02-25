@@ -6,6 +6,8 @@ import HeaderMobile from "./Header-mobile";
 import { useState, useEffect } from "react";
 import { carCatalog } from "../../data/data";
 import { carUsed } from "../../data/data";
+import { credit } from "../../data/data";
+import { specialOffer } from "../../data/data";
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -173,24 +175,27 @@ const Header = () => {
 
           <div className="header__bottom-category">
             <Select
-              value={carCatalog}
+              value={credit}
               img="select-arrow"
               className="header__bottom-category-item"
+              title="Кредит и рассрочка"
+            />
+          </div>
+
+          <div className="header__bottom-category">
+            <Select
+              value={specialOffer}
+              img="select-arrow"
+              className="header__bottom-category-item"
+              title="Спецпредложение"
             />
           </div>
 
           <div className="header__bottom-category">
             <Select
               value={carCatalog}
-              img="select-arrow"
               className="header__bottom-category-item"
-            />
-          </div>
-
-          <div className="header__bottom-category">
-            <Select
-              value={carCatalog}
-              className="header__bottom-category-item"
+              title="Такси в кредит"
             />
           </div>
 

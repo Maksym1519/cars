@@ -15,6 +15,7 @@ html,
   margin: 0;
   font-size: 14px;
   color: var(--black);
+  font-weight: 400;
 }
 
 .main {
@@ -43,28 +44,45 @@ a {
   color: inherit;
 }
 
+
 select {
-  border: none;
-  outline: none;
-  -webkit-appearance: none; /* Для Chrome/Safari */
-  -moz-appearance: none;    /* Для Firefox */
+  /* Убираем стандартный вид */
   appearance: none;
-  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Задаем свои стили */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+
+  /* Добавляем кастомную стрелку (опционально) */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px; /* Место для стрелки */
 }
 
-select:hover {
-  background: white;
-}
-
+/* Стили при фокусе */
 select:focus {
-  border: none;
-  box-shadow: none;
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-select:active {
-  border: none;
-  box-shadow: none;
+/* Ховер для самого select */
+select:hover {
+  border-color: #999;
+  background-color: #f9f9f9;
 }
 
-
+@media (max-width: 1439px) {
+  .container {
+    max-width: 100%;
+  }
+}
 

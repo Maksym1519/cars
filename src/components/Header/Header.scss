@@ -12,6 +12,7 @@
 
   &__top {
     width: 100%;
+    max-width: 100%;
     height: 43px;
     display: flex;
     align-items: center;
@@ -73,6 +74,10 @@
     &-left {
       width: fit-content;
       margin: 0 29px 0 0;
+
+      @include breakpoints.media(md) {
+        margin: 0;
+      }
     }
 
     &-left,
@@ -91,7 +96,7 @@
     }
 
     &-burger {
-      width: 28px;
+      min-width: 28px;
       height: 18px;
       display: flex;
       flex-direction: column;
@@ -116,6 +121,10 @@
         max-width: 198px;
         max-height: 58px;
         margin: 0 20px 0 0;
+        
+        @include breakpoints.media(md) {
+          max-width: 100%;
+        }
       }
 
       @include breakpoints.media(md) {
@@ -264,6 +273,10 @@
         font-size: 16px;
         text-transform: uppercase;
         color: var(--black);
+
+        @media(max-width:1024px) {
+          font-size: 1vw;
+        }
       }
     }
 
@@ -278,11 +291,17 @@
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3;
+        column-gap: 24px;
       }
       svg {
         width: 25px;
         height: 25px;
         cursor: pointer;
+
+        @include breakpoints.media(md) {
+          width: 17px;
+        height: 17px;
+        }
       }
     }
   }

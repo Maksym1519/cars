@@ -10,9 +10,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Container from "../Container/Container";
 
 const BigSlider = ({ img }) => {
-  
   return (
     <Swiper
       // install Swiper modules
@@ -21,28 +21,37 @@ const BigSlider = ({ img }) => {
       slidesPerView={1}
       speed={1500}
       navigation={{
-        nextEl: '.custom-next-btn',
-        prevEl: '.custom-prev-btn',
+        nextEl: ".custom-next-btn",
+        prevEl: ".custom-prev-btn",
       }}
       pagination={{ clickable: true }}
       grabCursor={true}
-      // scrollbar={{ draggable: true }}
-      // onSwiper={(swiper) => console.log(swiper)}
-      // onSlideChange={() => console.log('slide change')}
     >
       {img &&
         img.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={item} alt="img" />
+            <div className="bigslider-slide" key={index}>
+              <Container>
+              <div className="bigslider-slide__info">
+                <p className="bigslider-slide__tag">Осталось всего 10 авто!</p>
+                <h1 className="bigslider-slide__title">
+                  Грандиозная распродажа тестового парка!
+                </h1>
+                <p className="bigslider-slide__description">Узнай свою цену!</p>
+              </div>
+              </Container>
+            
+              <img className="bigslider-slide__img" src={item} alt="img" />
+            </div>
           </SwiperSlide>
         ))}
 
       <svg className="custom-prev-btn">
-        <use href='sprite.svg#swiper-prev'></use>
+        <use href="sprite.svg#swiper-prev"></use>
       </svg>
 
       <svg className="custom-next-btn">
-        <use href='sprite.svg#swiper-next'></use>
+        <use href="sprite.svg#swiper-next"></use>
       </svg>
     </Swiper>
   );
